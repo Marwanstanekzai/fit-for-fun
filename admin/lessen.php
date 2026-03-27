@@ -8,6 +8,14 @@ $succes = '';
 $fout   = '';
 
 // 1. Toevoegen van een nieuwe les
+if (isset($_POST['actie']) && $_POST['actie'] === 'toevoegen') {
+    $naam           = trim($_POST['naam']);
+    $prijs          = (float)$_POST['prijs'];
+    $datum          = $_POST['datum'];
+    $tijd           = $_POST['tijd'];
+    $min_personen   = (int)$_POST['min_personen'];
+    $max_personen   = (int)$_POST['max_personen'];
+
     if (strtotime($datum) < strtotime(date('Y-m-d'))) {
         $fout = "Je kunt geen les plannen in het verleden.";
     } elseif ($min_personen > $max_personen) {

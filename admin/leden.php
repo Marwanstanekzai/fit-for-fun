@@ -8,6 +8,13 @@ $succes = '';
 $fout   = '';
 
 // 1. Toevoegen van een nieuw lid
+if (isset($_POST['actie']) && $_POST['actie'] === 'toevoegen') {
+    $voornaam       = trim($_POST['voornaam']);
+    $achternaam     = trim($_POST['achternaam']);
+    $email          = trim($_POST['email']);
+    $mobiel         = trim($_POST['mobiel']);
+    $relatienummer  = (int)$_POST['relatienummer'];
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $fout = "Ongeldig e-mailadres formaat.";
     } else {
