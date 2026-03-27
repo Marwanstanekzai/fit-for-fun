@@ -1,0 +1,391 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= BLUR ================= */
+
+.page-content.blur{
+filter:blur(8px);
+transition:0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+background:#dcdcdc;
+height:110px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 80px;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.logo{
+height:90px;
+}
+
+.icon{
+display:block;
+}
+
+/* ================= SEARCH BAR ================= */
+
+.search-bar{
+display:flex;
+align-items:center;
+height:50px;
+width:320px;
+background:#e9e9e9;
+border:2px solid #000;
+border-radius:40px;
+padding:0 20px;
+}
+
+.search-bar input{
+border:none;
+background:transparent;
+outline:none;
+flex:1;
+font-size:16px;
+}
+
+.search-icon{
+width:22px;
+margin-right:10px;
+}
+
+/* ================= NAV LINKS ================= */
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#000;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active{
+color:#ff8c00;
+}
+
+/* ================= BUTTON ================= */
+
+.button,
+.login-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+height:50px;
+padding:0 28px;
+
+background-color:#ff8c00;
+border-radius:40px;
+border:3px solid #000;
+
+box-shadow:0 5px 0 #1e88c9;
+
+font-weight:800;
+color:#000;
+cursor:pointer;
+text-decoration:none;
+
+transition:0.15s;
+}
+
+.button:hover,
+.login-btn:hover{
+transform:translateY(3px);
+box-shadow:0 2px 0 #1e88c9;
+}
+
+.button:active,
+.login-btn:active{
+transform:translateY(5px);
+box-shadow:none;
+}
+
+/* ================= ICON ================= */
+
+.profile-icon{
+width:22px;
+height:22px;
+object-fit:contain;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:85vh;
+background:url("img/image.png") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-logo-container{
+position:relative;
+}
+
+.hero-logo{
+width:500px;
+max-width:90%;
+}
+
+.button.large{
+position:absolute;
+bottom:-80px;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+padding:80px 20px;
+text-align:center;
+background:#0b1c2c;
+color:white;
+}
+
+.gallery-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.gallery-container img{
+width:300px;
+border-radius:20px;
+transition:0.3s;
+}
+
+.gallery-container img:hover{
+transform:scale(1.05);
+}
+
+/* ================= HEALTH ================= */
+
+.health{
+padding:80px 20px;
+text-align:center;
+background:#f5f5f5;
+}
+
+.health p{
+max-width:600px;
+margin:0 auto 30px;
+}
+
+/* ================= AANBIEDINGEN ================= */
+
+.aanbiedingen{
+background:url("img/image.png") center/cover no-repeat;
+padding:120px 80px;
+text-align:center;
+color:white;
+}
+
+.aanbiedingen h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.aanbiedingen-sub{
+margin-bottom:60px;
+font-size:18px;
+}
+
+.deals-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.deal-card{
+background:rgba(0,0,0,0.7);
+border:3px solid #ff8c00;
+border-radius:20px;
+width:280px;
+padding:30px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.deal-card h2{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.deal-title{
+font-size:20px;
+font-weight:bold;
+}
+
+.deal-price{
+font-size:32px;
+font-weight:bold;
+color:#ff8c00;
+}
+
+.deal-old{
+font-size:14px;
+opacity:0.7;
+}
+
+/* ================= ROOSTER ================= */
+
+.rooster{
+background:url("img/image.png") center/cover no-repeat;
+padding:120px 80px;
+text-align:center;
+color:white;
+}
+
+.rooster-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.rooster-card{
+background:rgba(0,0,0,0.7);
+border:3px solid #ff8c00;
+border-radius:20px;
+width:250px;
+padding:25px;
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* ================= LOGIN MODAL ================= */
+
+.login-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.4);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+visibility:hidden;
+opacity:0;
+transition:0.3s ease;
+}
+
+.login-overlay.active{
+visibility:visible;
+opacity:1;
+}
+
+.login-modal{
+background:#fff;
+padding:40px;
+width:350px;
+border-radius:20px;
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+from{
+transform:scale(0.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.login-modal input{
+width:100%;
+height:45px;
+margin-bottom:15px;
+padding:0 15px;
+border-radius:30px;
+border:2px solid #000;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+background:#111;
+color:white;
+padding:60px 80px 20px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-box{
+max-width:250px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.footer-box h3{
+color:#ff8c00;
+}
+
+.footer-logo{
+height:70px;
+}
+
+.footer-box a{
+color:white;
+text-decoration:none;
+}
+
+.footer-box a:hover{
+color:#ff8c00;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid #333;
+padding-top:20px;
+font-size:14px;
+}
